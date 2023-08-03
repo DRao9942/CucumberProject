@@ -1,0 +1,44 @@
+*----TestNG Annotations:
+
+@BeforeSuite: Executed before the test suite starts.
+@AfterSuite: Executed after the test suite finishes.
+@BeforeTest: Executed before each test defined in the test suite.
+@AfterTest: Executed after each test defined in the test suite.
+@BeforeClass: Executed before the first test method in the current class.
+@AfterClass: Executed after all the test methods in the current class.
+@BeforeMethod: Executed before each test method.
+@AfterMethod: Executed after each test method.
+
+
+*----Cucumber Hooks tags 
+
+@Before
+@After
+@BeforeSteps
+@AfterSteps
+
+--Ordering the Hooks
+@Before(order=1)
+@After(order=1)
+@Before(order=2)
+@After(order=2)
+
+
+* ----BackGround keyword in BDD Framework-----
+
+	The Background keyword is used to define a set of common preconditions or steps that are shared among multiple scenarios within a feature file.
+ 	It allows you to specify a background context against which all scenarios in the feature file are executed.
+ 	
+* ---- mvn test --- is the commant line to run the test cases from CMD 
+
+		mvn test
+		mvn test -Dtest=TestSuiteName
+		mvn test -Dtest=TestClass
+		mvn test -Dcucumber.options="--tags @tagname"
+			Exampels: 
+			mvn test -Dcucumber.options="--tags @smoke"
+			mvn test -Dcucumber.options="--tags @smoke,@regression"
+	Remember this even i can run the scebario by placing the line number 9 (feature file path and in the end feature:9)
+
+
+
